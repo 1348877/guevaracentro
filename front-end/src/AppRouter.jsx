@@ -6,6 +6,8 @@ import Pacientes from './pages/Pacientes';
 import NotFound from './pages/NotFound';
 import Navbar from './components/Navbar';
 import Login from './components/Login';
+import LoginRedirect from './pages/LoginRedirect';
+import StaffLogin from './components/StaffLogin';
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -35,45 +37,73 @@ class ErrorBoundary extends Component {
 }
 
 function ProtectedRoute({ user, children }) {
-  const navigate = useNavigate();
-  if (!user) {
-    alert('Debe iniciar sesión para acceder a esta sección');
-    return null;
-  }
+  // Permitir acceso a /agendar aunque no esté logueado, pero proteger otras rutas si es necesario
   return children;
 }
 
 export default function AppRouter() {
   const [user, setUser] = useState(null);
   const [showLogin, setShowLogin] = useState(false);
+  const [showStaff, setShowStaff] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const loginBtnRef = useRef();
+  const staffBtnRef = useRef();
   const [loginPos, setLoginPos] = useState({ top: 70, left: null });
+  const [staffPos, setStaffPos] = useState(null);
 
+  // Calcular posición del login público
   useEffect(() => {
     if (showLogin && loginBtnRef.current) {
       const rect = loginBtnRef.current.getBoundingClientRect();
       setLoginPos({
-        top: rect.bottom + window.scrollY + 8,
+        top: rect.bottom + window.scrollY + 4,
         left: rect.left + rect.width / 2 + window.scrollX
       });
     }
   }, [showLogin]);
 
+  // Calcular posición del login staff
+  useEffect(() => {
+    if (showStaff && staffBtnRef.current) {
+      const rect = staffBtnRef.current.getBoundingClientRect();
+      setStaffPos({
+        top: rect.bottom - 4, // Espacio visual más natural
+        left: rect.left + rect.width / 2 + window.scrollX
+      });
+    } else if (!showStaff) {
+      setStaffPos(null);
+    }
+  }, [showStaff]);
+
+  // Exclusividad de paneles
   const handleLoginToggle = () => {
     if (showLogin) {
-      // Cerrar con animación
       setIsClosing(true);
       setTimeout(() => {
         setShowLogin(false);
         setIsClosing(false);
       }, 320);
     } else {
-      // Abrir
       setShowLogin(true);
+      setShowStaff(false);
     }
   };
-
+  const handleStaffToggle = () => {
+    if (showStaff) {
+      setShowStaff(false);
+      setStaffPos(null);
+    } else if (staffBtnRef.current) {
+      setTimeout(() => {
+        const rect = staffBtnRef.current.getBoundingClientRect();
+        setStaffPos({
+          top: rect.bottom - 4, // Espacio visual más natural
+          left: rect.left + rect.width / 2 + window.scrollX
+        });
+        setShowStaff(true);
+        setShowLogin(false);
+      }, 0);
+    }
+  };
   const handleCloseLogin = () => {
     setIsClosing(true);
     setTimeout(() => {
@@ -81,6 +111,7 @@ export default function AppRouter() {
       setIsClosing(false);
     }, 320);
   };
+  const handleCloseStaff = () => setShowStaff(false);
 
   return (
     <ErrorBoundary>
@@ -91,8 +122,12 @@ export default function AppRouter() {
           onLogout={() => setUser(null)}
           showLogin={showLogin}
           loginBtnRef={loginBtnRef}
+          staffBtnRef={staffBtnRef}
+          onStaffToggle={handleStaffToggle}
+          showStaff={showStaff}
+          onStaffLogin={u => setUser(u.usuario)}
+          staffPos={staffPos}
         />
-        {/* Solo un panel de login flotante alineado con el botón */}
         {showLogin && (
           <div style={{
             position: 'absolute',
@@ -109,6 +144,14 @@ export default function AppRouter() {
             />
           </div>
         )}
+        {showStaff && staffPos && (
+          <StaffLogin
+            open={showStaff}
+            onClose={handleCloseStaff}
+            panelPos={staffPos}
+            onSuccess={u => { setUser(u.usuario); handleCloseStaff(); }}
+          />
+        )}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <Routes>
             <Route path="/" element={<App />} />
@@ -118,6 +161,7 @@ export default function AppRouter() {
               </ProtectedRoute>
             } />
             <Route path="/pacientes" element={<Pacientes />} />
+            <Route path="/login-redirect" element={<LoginRedirect />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

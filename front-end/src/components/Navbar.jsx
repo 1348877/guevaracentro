@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Navbar.css';
+import { FaLock } from 'react-icons/fa';
 
-const Navbar = ({ user, onLoginClick, onLogout, showLogin, loginBtnRef }) => {
+const Navbar = ({ user, onLoginClick, onLogout, showLogin, loginBtnRef, staffBtnRef, onStaffToggle, showStaff, onStaffLogin, staffPos }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
@@ -36,13 +37,19 @@ const Navbar = ({ user, onLoginClick, onLogout, showLogin, loginBtnRef }) => {
         </div>
 
         <div className="navbar-actions">
-          {user ? (
+          {!user && (
+            <>
+              <button className="staff-login-btn" title="Acceso privado" ref={staffBtnRef} onClick={onStaffToggle}>
+                <FaLock size={20} />
+              </button>
+              <button className="navbar-button" onClick={onLoginClick} ref={loginBtnRef} style={{ background: showLogin ? '#222' : undefined }}>
+                Iniciar Sesión
+              </button>
+            </>
+          )}
+          {user && (
             <button className="navbar-button" onClick={onLogout}>
               Cerrar sesión
-            </button>
-          ) : (
-            <button className="navbar-button" onClick={onLoginClick} ref={loginBtnRef} style={{ background: showLogin ? '#222' : undefined }}>
-              Iniciar Sesión
             </button>
           )}
         </div>
