@@ -42,7 +42,7 @@
 .navbar-link {
   color: #1d1d1f;
   text-decoration: none;
-  font-size: 0.875rem;
+  font-size: 1.5rem; /* Más grande */
   opacity: 0.8;
   transition: opacity 0.2s ease;
 }
@@ -65,7 +65,7 @@
 .navbar-button {
   padding: 6px 16px;
   border-radius: 980px;
-  font-size: 0.875rem;
+  font-size: 0.875rem; /* Restaurado al tamaño original */
   font-weight: 500;
   color: #fff;
   background-color: #000;

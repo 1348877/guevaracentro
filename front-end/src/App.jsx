@@ -2,9 +2,13 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Login from './components/Login';
 
 function App() {
   const [count, setCount] = useState(0)
+  const [user, setUser] = useState(null);
+
+  if (!user) return <Login onLogin={setUser} />;
 
   return (
     <>
@@ -28,6 +32,9 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <h1>Bienvenido, {user.usuario?.nombre || user.usuario?.telefono || user.usuario?.email}</h1>
+      <button onClick={() => setUser(null)} style={{margin:'1rem', borderRadius:8, padding:8}}>Cerrar sesión</button>
+      {/* Aquí puedes renderizar el resto de tu app protegida */}
     </>
   )
 }

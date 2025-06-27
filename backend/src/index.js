@@ -17,6 +17,8 @@ require('./models/ResultadoTest');
 
 // Importar rutas
 const pacienteRoutes = require('./routes/pacienteRoutes');
+const citaRoutes = require('./routes/citaRoutes');
+const authRoutes = require('./routes/authRoutes');
 
 // Rutas de ejemplo
 app.get('/', (req, res) => {
@@ -25,6 +27,8 @@ app.get('/', (req, res) => {
 
 // Usar rutas
 app.use('/api/pacientes', pacienteRoutes);
+app.use('/api/citas', citaRoutes);
+app.use('/api/auth', authRoutes);
 
 const PORT = process.env.PORT || 3001;
 

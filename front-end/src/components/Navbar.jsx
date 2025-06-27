@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ user, onLoginClick, onLogout, showLogin, loginBtnRef }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,9 +36,15 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-actions">
-          <button className="navbar-button">
-            Iniciar Sesión
-          </button>
+          {user ? (
+            <button className="navbar-button" onClick={onLogout}>
+              Cerrar sesión
+            </button>
+          ) : (
+            <button className="navbar-button" onClick={onLoginClick} ref={loginBtnRef} style={{ background: showLogin ? '#222' : undefined }}>
+              Iniciar Sesión
+            </button>
+          )}
         </div>
       </div>
     </nav>
