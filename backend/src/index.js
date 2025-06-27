@@ -15,10 +15,16 @@ require('./models/Cita');
 require('./models/Test');
 require('./models/ResultadoTest');
 
+// Importar rutas
+const pacienteRoutes = require('./routes/pacienteRoutes');
+
 // Rutas de ejemplo
 app.get('/', (req, res) => {
   res.send('API Centro Psicológico Juliaca - Backend funcionando');
 });
+
+// Usar rutas
+app.use('/api/pacientes', pacienteRoutes);
 
 const PORT = process.env.PORT || 3001;
 
