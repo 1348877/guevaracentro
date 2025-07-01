@@ -4,7 +4,18 @@ const Paciente = require('../models/Paciente');
 // Obtener todos los pacientes
 exports.getAllPacientes = async (req, res) => {
   try {
-    const pacientes = await Paciente.findAll();
+    let pacientes;
+    if (req.user.rol === 'paciente') {
+      // Solo puede ver su propio registro (por email o telefono)
+      pacientes = await Paciente.findAll({ where: { email: req.user.email } });
+    } else if (req.user.rol === 'psicologo') {
+      // Aquí se podría filtrar por pacientes asignados al psicólogo (requiere relación en DB)
+      // Por ahora, denegar acceso hasta implementar asignación
+      return res.status(403).json({ error: 'Acceso denegado: solo staff autorizado' });
+    } else {
+      // Secretaria y admin ven todo
+      pacientes = await Paciente.findAll();
+    }
     res.json(pacientes);
   } catch (error) {
     res.status(500).json({ error: 'Error al obtener pacientes', detalle: error.message });
@@ -26,6 +37,13 @@ exports.getPacienteById = async (req, res) => {
   try {
     const paciente = await Paciente.findByPk(req.params.id);
     if (!paciente) return res.status(404).json({ error: 'Paciente no encontrado' });
+    if (req.user.rol === 'paciente' && paciente.email !== req.user.email) {
+      return res.status(403).json({ error: 'Acceso denegado: solo puedes ver tu propio perfil' });
+    }
+    if (req.user.rol === 'psicologo') {
+      // Aquí se podría validar si el paciente está asignado al psicólogo
+      return res.status(403).json({ error: 'Acceso denegado: solo staff autorizado' });
+    }
     res.json(paciente);
   } catch (error) {
     res.status(500).json({ error: 'Error al obtener paciente', detalle: error.message });

@@ -1,0 +1,241 @@
+/* Footer.css - Estilo profesional para el footer */
+
+.footer {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  padding: 50px 0 20px;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.footer-section h3 {
+  color: #ff6b35;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footer-section h4 {
+  color: #ff6b35;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.footer-section p {
+  color: #bdc3c7;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-media {
+  margin-top: 25px;
+}
+
+.social-media h4 {
+  color: #ff6b35;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.social-icon.facebook {
+  background: #4267b2;
+}
+
+.social-icon.facebook:hover {
+  background: #365899;
+  transform: translateY(-3px);
+}
+
+.social-icon.tiktok {
+  background: #000;
+}
+
+.social-icon.tiktok:hover {
+  background: #333;
+  transform: translateY(-3px);
+}
+
+.social-icon.instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-icon.instagram:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(188, 24, 136, 0.3);
+}
+
+.social-icon.youtube {
+  background: #ff0000;
+}
+
+.social-icon.youtube:hover {
+  background: #cc0000;
+  transform: translateY(-3px);
+}
+
+.social-icon.linkedin {
+  background: #0077b5;
+}
+
+.social-icon.linkedin:hover {
+  background: #005885;
+  transform: translateY(-3px);
+}
+
+.social-icon.whatsapp {
+  background: #25d366;
+}
+
+.social-icon.whatsapp:hover {
+  background: #1ebe57;
+  transform: translateY(-3px);
+}
+
+.social-icon.email {
+  background: #ff6b35;
+}
+
+.social-icon.email:hover {
+  background: #e55a2b;
+  transform: translateY(-3px);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #ff6b35;
+}
+
+.schedule p {
+  margin-bottom: 8px;
+  color: #bdc3c7;
+}
+
+.footer-bottom {
+  border-top: 1px solid #4a5568;
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-bottom p {
+  color: #bdc3c7;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ff6b35;
+}
+
+.footer-links span {
+  color: #6c757d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 0 15px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .footer-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 0 15px;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.3rem;
+  }
+  
+  .footer-section h4 {
+    font-size: 1.1rem;
+  }
+}

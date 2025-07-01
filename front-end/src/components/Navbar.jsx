@@ -28,12 +28,32 @@ const Navbar = ({ user, onLoginClick, onLogout, showLogin, loginBtnRef, staffBtn
           <Link to="/" className={`navbar-link ${location.pathname === '/' ? 'active' : ''}`}>
             Inicio
           </Link>
-          <Link to="/pacientes" className={`navbar-link ${location.pathname === '/pacientes' ? 'active' : ''}`}>
-            Pacientes
+          <Link to="/nosotros" className={`navbar-link ${location.pathname === '/nosotros' ? 'active' : ''}`}>
+            Nosotros
           </Link>
-          <Link to="/agendar" className={`navbar-link ${location.pathname === '/agendar' ? 'active' : ''}`}>
-            Agendar Cita
+          <Link to="/servicios" className={`navbar-link ${location.pathname === '/servicios' ? 'active' : ''}`}>
+            Servicios
           </Link>
+          <Link to="/equipo" className={`navbar-link ${location.pathname === '/equipo' ? 'active' : ''}`}>
+            Nuestro Equipo
+          </Link>
+          <Link to="/blog" className={`navbar-link ${location.pathname === '/blog' ? 'active' : ''}`}>
+            Blog
+          </Link>
+          <Link to="/faq" className={`navbar-link ${location.pathname === '/faq' ? 'active' : ''}`}>
+            FAQ
+          </Link>
+          <Link to="/contacto" className={`navbar-link ${location.pathname === '/contacto' ? 'active' : ''}`}>
+            Contacto
+          </Link>
+          <Link to="/solicitar-cita" className={`navbar-link ${location.pathname === '/solicitar-cita' ? 'active' : ''}`}>
+            Solicitar Cita
+          </Link>
+          {user && (
+            <Link to="/perfil" className={`navbar-link ${location.pathname === '/perfil' ? 'active' : ''}`}>
+              Mi Perfil
+            </Link>
+          )}
         </div>
 
         <div className="navbar-actions">

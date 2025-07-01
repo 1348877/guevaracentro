@@ -8,6 +8,14 @@ import Navbar from './components/Navbar';
 import Login from './components/Login';
 import LoginRedirect from './pages/LoginRedirect';
 import StaffLogin from './components/StaffLogin';
+import Servicios from './pages/Servicios';
+import Nosotros from './pages/Nosotros';
+import Equipo from './pages/Equipo';
+import Contacto from './pages/Contacto';
+import Blog from './pages/Blog';
+import Faq from './pages/Faq';
+import ArticuloCompleto from './pages/ArticuloCompleto';
+import SolicitarCita from './pages/SolicitarCita';
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -152,19 +160,25 @@ export default function AppRouter() {
             onSuccess={u => { setUser(u.usuario); handleCloseStaff(); }}
           />
         )}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <Routes>
-            <Route path="/" element={<App />} />
-            <Route path="/agendar" element={
-              <ProtectedRoute user={user}>
-                <AgendarCita />
-              </ProtectedRoute>
-            } />
-            <Route path="/pacientes" element={<Pacientes />} />
-            <Route path="/login-redirect" element={<LoginRedirect />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/agendar" element={
+            <ProtectedRoute user={user}>
+              <AgendarCita />
+            </ProtectedRoute>
+          } />
+          <Route path="/pacientes" element={<Pacientes />} />
+          <Route path="/login-redirect" element={<LoginRedirect />} />
+          <Route path="/servicios" element={<Servicios />} />
+          <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/equipo" element={<Equipo />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<ArticuloCompleto />} />
+          <Route path="/solicitar-cita" element={<SolicitarCita />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </BrowserRouter>
     </ErrorBoundary>
   );

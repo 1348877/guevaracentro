@@ -1,0 +1,197 @@
+.servicios-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 54px 2rem 2rem 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.servicios-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.servicios-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.servicios-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.servicios-tabla {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.tabla-header {
+  display: grid;
+  grid-template-columns: 1.5fr 2.5fr 1fr 1fr 1fr;
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.tabla-row {
+  display: grid;
+  grid-template-columns: 1.5fr 2.5fr 1fr 1fr 1fr;
+  padding: 1.5rem 1rem;
+  gap: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s;
+}
+
+.tabla-row:hover {
+  background: #fafafa;
+}
+
+.tabla-row:last-child {
+  border-bottom: none;
+}
+
+.col-servicio h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.col-descripcion {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.col-modalidad, .col-duracion, .col-inversion {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.col-inversion {
+  color: #ff9800;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.servicios-cta {
+  text-align: center;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 2.5rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+.servicios-cta h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.servicios-cta p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.btn-agendar {
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+}
+
+.btn-agendar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+}
+
+.servicios-notas {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 4px solid #ff9800;
+}
+
+.servicios-notas h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.servicios-notas ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.servicios-notas li {
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  color: #555;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.servicios-notas li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #ff9800;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .tabla-header, .tabla-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .tabla-header {
+    display: none;
+  }
+  
+  .tabla-row {
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .col-servicio h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .col-descripcion {
+    margin-bottom: 0.5rem;
+  }
+  
+  .col-modalidad::before { content: "Modalidad: "; font-weight: 600; }
+  .col-duracion::before { content: "Duración: "; font-weight: 600; }
+  .col-inversion::before { content: "Inversión: "; font-weight: 600; }
+}

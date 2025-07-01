@@ -1,0 +1,236 @@
+.contacto-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 54px 2rem 2rem 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+.contacto-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contacto-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.contacto-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contacto-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.contacto-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+  border-left: 4px solid #ff9800;
+}
+
+.info-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.3rem;
+  line-height: 1.5;
+}
+
+.info-card strong {
+  color: #222;
+  font-weight: 600;
+}
+
+.contacto-form-section {
+  background: linear-gradient(135deg, #f8f9fa, #ffffff);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.contacto-form-section h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #ff9800;
+  box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-enviar {
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+  align-self: center;
+}
+
+.btn-enviar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+}
+
+.mapa-section {
+  margin-bottom: 3rem;
+}
+
+.mapa-section h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.mapa-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+.mapa-descripcion {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  font-style: italic;
+}
+
+.urgencias-section {
+  background: linear-gradient(135deg, #fff3cd, #ffffff);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid #ffc107;
+  border-left: 6px solid #dc3545;
+}
+
+.urgencias-section h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #dc3545;
+  margin-bottom: 1rem;
+}
+
+.urgencias-section p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.urgencias-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.urgencias-section li {
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #555;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.urgencias-section li:last-child {
+  border-bottom: none;
+}
+
+.urgencias-section strong {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .contacto-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .contacto-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .contacto-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .contacto-form-section {
+    padding: 1.5rem;
+  }
+  
+  .mapa-container iframe {
+    height: 250px;
+  }
+}

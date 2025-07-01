@@ -26,9 +26,9 @@ app.get('/', (req, res) => {
 });
 
 // Usar rutas
-app.use('/api/pacientes', pacienteRoutes);
-app.use('/api/citas', citaRoutes);
-app.use('/api/auth', authRoutes);
+app.use('/api/pacientes', require('./routes/pacienteRoutes'));
+app.use('/api/citas', require('./routes/citaRoutes'));
+app.use('/api/auth', require('./routes/authRoutes'));
 
 const PORT = process.env.PORT || 3001;
 

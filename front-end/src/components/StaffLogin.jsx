@@ -12,16 +12,6 @@ export default function StaffLogin({ onSuccess, open, onClose, panelPos }) {
   const btnRef = useRef(null);
 
   useEffect(() => {
-    if (open && btnRef.current) {
-      const rect = btnRef.current.getBoundingClientRect();
-      setPanelPos({
-        top: rect.bottom + window.scrollY,
-        left: rect.left + rect.width / 2 + window.scrollX
-      });
-    }
-  }, [open, btnRef]);
-
-  useEffect(() => {
     if (!open) {
       setEmail('');
       setPassword('');
@@ -69,7 +59,7 @@ export default function StaffLogin({ onSuccess, open, onClose, panelPos }) {
     }
   };
 
-  if (!open || !panelPos) return null;
+  if (!open) return null;
 
   return (
     <div className="staff-login-absolute-overlay" onClick={onClose}>
@@ -77,8 +67,8 @@ export default function StaffLogin({ onSuccess, open, onClose, panelPos }) {
         className="staff-login-panel slide-up"
         style={{
           position: 'fixed',
-          top: panelPos.top,
-          left: panelPos.left,
+          top: 44.5,
+          left: panelPos?.left || '50%', // Si quieres centrarlo horizontalmente, usa '50%'
           transform: 'translateX(-50%)',
           zIndex: 1001
         }}
