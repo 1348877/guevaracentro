@@ -38,3 +38,258 @@
   transform: translateX(100%); 
   opacity: 0;
 }
+
+/* Estilos base para el componente Login */
+.login-container {
+  width: 320px;
+  min-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 10000;
+  border: 1px solid #f0f0f0;
+  font-size: 1.08rem;
+  transition: box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.login-container.small {
+  width: 200px;
+  padding: 8px;
+  font-size: 0.98rem;
+}
+
+.login-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.login-close:hover {
+  background: #f5f5f5;
+  color: #333;
+  transform: scale(1.1);
+}
+
+.login-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 2px;
+  justify-content: center;
+}
+
+.login-header.with-back {
+  justify-content: flex-start;
+}
+
+.login-back-btn {
+  background: none;
+  border: none;
+  color: #222;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0 6px 0 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  margin-right: 4px;
+}
+
+.login-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.login-container.small .login-title {
+  font-size: 1.08rem;
+}
+
+.login-content {
+  min-height: 90px;
+}
+
+.login-btn {
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  font-weight: 400;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  min-width: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.login-btn-google {
+  padding: 9px 0;
+  background: #4285F4;
+  color: #fff;
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.login-container.small .login-btn-google {
+  padding: 7px 0;
+  font-size: 0.98rem;
+}
+
+.login-btn-phone {
+  padding: 9px 0;
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 4px;
+}
+
+.login-container.small .login-btn-phone {
+  padding: 7px 0;
+  font-size: 0.93rem;
+}
+
+.login-input {
+  width: 100%;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 1.05rem;
+  border: 1px solid #e0e0e0;
+  transition: border-color 0.2s ease;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #4285F4;
+}
+
+.login-container.small .login-input {
+  padding: 6px;
+  font-size: 0.98rem;
+}
+
+.login-btn-action {
+  width: 100%;
+  border-radius: 8px;
+  padding: 9px 0;
+  background: #222;
+  color: #fff;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-btn-action:hover {
+  background: #333;
+}
+
+.login-container.small .login-btn-action {
+  padding: 7px 0;
+}
+
+.login-error {
+  color: red;
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+.login-container.small .login-error {
+  font-size: 0.95rem;
+}
+
+/* Media queries para mobile */
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    max-width: 320px;
+    min-width: 280px;
+  }
+  
+  .login-header h3 {
+    font-size: 1.4rem;
+  }
+  
+  .login-title {
+    font-size: 1.3rem;
+  }
+  
+  .login-btn {
+    min-height: 44px;
+    font-size: 1rem;
+  }
+  
+  .login-btn-google,
+  .login-btn-phone {
+    padding: 12px 0;
+    font-size: 1.05rem;
+  }
+  
+  .login-input {
+    padding: 12px;
+    font-size: 1.1rem;
+    min-height: 44px;
+    box-sizing: border-box;
+  }
+  
+  .login-btn-action {
+    padding: 12px 0;
+    min-height: 44px;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    width: calc(100vw - 1rem);
+    max-width: 320px;
+    margin: 0 0.5rem;
+    padding: 16px;
+  }
+  
+  .login-content {
+    min-height: 100px;
+  }
+  
+  .login-btn {
+    min-height: 48px;
+  }
+  
+  .login-btn-google,
+  .login-btn-phone,
+  .login-btn-action {
+    padding: 14px 0;
+    font-size: 1.1rem;
+    min-height: 48px;
+  }
+  
+  .login-input {
+    padding: 14px;
+    font-size: 1.1rem;
+    min-height: 48px;
+  }
+}

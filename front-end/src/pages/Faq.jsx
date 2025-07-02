@@ -60,13 +60,14 @@ export default function Faq() {
   ];
 
   return (
-    <div className="faq-container">
-      <div className="faq-hero">
-        <h1>Preguntas Frecuentes</h1>
-        <p className="faq-subtitle">
-          Encuentra respuestas a las dudas más comunes sobre nuestros servicios y procesos
-        </p>
-      </div>
+    <div className="page-wrapper">
+      <div className="faq-container">
+        <div className="faq-hero">
+          <h1>Preguntas Frecuentes</h1>
+          <p className="faq-subtitle">
+            Encuentra respuestas a las dudas más comunes sobre nuestros servicios y procesos
+          </p>
+        </div>
 
       <div className="faq-content">
         <div className="faq-intro">
@@ -116,6 +117,7 @@ export default function Faq() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

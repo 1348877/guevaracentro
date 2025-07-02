@@ -24,13 +24,14 @@ export default function Contacto() {
   };
 
   return (
-    <div className="contacto-container">
-      <div className="contacto-hero">
-        <h1>Contacto</h1>
-        <p className="contacto-subtitle">
-          Estamos aquí para apoyarte. Contáctanos y da el primer paso hacia tu bienestar.
-        </p>
-      </div>
+    <div className="page-wrapper">
+      <div className="contacto-container">
+        <div className="contacto-hero">
+          <h1>Contacto</h1>
+          <p className="contacto-subtitle">
+            Estamos aquí para apoyarte. Contáctanos y da el primer paso hacia tu bienestar.
+          </p>
+        </div>
 
       <div className="contacto-content">
         <div className="contacto-info">
@@ -153,6 +154,7 @@ export default function Contacto() {
           <li><strong>Centro de Emergencias Mujer:</strong> 100 (gratuito, 24 horas)</li>
         </ul>
       </div>
+    </div>
     </div>
   );
 }

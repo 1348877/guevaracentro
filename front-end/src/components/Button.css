@@ -88,3 +88,59 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Responsive Design para Botones */
+@media (max-width: 768px) {
+  .btn {
+    min-height: 44px; /* Tamaño mínimo recomendado para touch */
+    gap: 0.75rem;
+  }
+  
+  .btn-small {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+    min-height: 40px;
+  }
+
+  .btn-medium {
+    padding: 1rem 1.75rem;
+    font-size: 1rem;
+    min-height: 44px;
+  }
+
+  .btn-large {
+    padding: 1.25rem 2.25rem;
+    font-size: 1.125rem;
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    min-height: 48px;
+    font-size: 1rem;
+  }
+  
+  .btn-small {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+    min-height: 44px;
+  }
+
+  .btn-medium {
+    padding: 1.125rem 2rem;
+    font-size: 1.05rem;
+    min-height: 48px;
+  }
+
+  .btn-large {
+    padding: 1.375rem 2.5rem;
+    font-size: 1.125rem;
+    min-height: 52px;
+  }
+  
+  /* En móvil, hacer los botones más anchos por defecto */
+  .btn:not(.btn-icon) {
+    min-width: 120px;
+  }
+}

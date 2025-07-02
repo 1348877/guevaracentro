@@ -1,13 +1,28 @@
+/* Page Wrapper - Similar to SolicitarCita */
+.page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 140px; /* Space for fixed navbar */
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
 .faq-container {
+  width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  padding: 54px 2rem 2rem 2rem;
+  padding: 0 2rem 2rem 2rem; /* Solo padding lateral y inferior */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
+  box-sizing: border-box;
 }
 
 .faq-hero {
   text-align: center;
+  margin-top: 6rem;
   margin-bottom: 3rem;
 }
 
@@ -35,15 +50,17 @@
 }
 
 .faq-intro {
-  background: linear-gradient(135deg, #f8f9fa, #ffffff);
+  background: linear-gradient(135deg, #4A90E2, #6366F1);
+  color: white;
   padding: 2rem;
   border-radius: 12px;
-  border-left: 4px solid #ff9800;
+  border-left: 4px solid rgba(255,255,255,0.3);
+  box-shadow: 0 4px 20px rgba(74, 144, 226, 0.3);
 }
 
 .faq-intro p {
   font-size: 1.05rem;
-  color: #555;
+  color: rgba(255,255,255,0.95);
   line-height: 1.7;
   margin: 0;
   text-align: center;
@@ -128,12 +145,12 @@
 }
 
 .faq-contact {
-  background: linear-gradient(135deg, #ff9800, #f57c00);
+  background: linear-gradient(135deg, #4A90E2, #6366F1);
   color: white;
   padding: 2.5rem;
   border-radius: 16px;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(255, 152, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(74, 144, 226, 0.3);
 }
 
 .faq-contact h3 {
@@ -177,6 +194,18 @@
 }
 
 @media (max-width: 768px) {
+  .page-wrapper {
+    padding-top: 90px; /* Ajuste para móvil */
+    padding-bottom: 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .faq-container {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
   .faq-hero h1 {
     font-size: 2rem;
   }
@@ -203,5 +232,13 @@
     width: 100%;
     max-width: 300px;
     text-align: center;
+  }
+
+  .faq-intro {
+    padding: 1.5rem;
+  }
+
+  .faq-contact {
+    padding: 2rem 1.5rem;
   }
 }

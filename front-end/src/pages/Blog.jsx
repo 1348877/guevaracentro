@@ -73,13 +73,14 @@ export default function Blog() {
   ];
 
   return (
-    <div className="blog-container">
-      <div className="blog-hero">
-        <h1>Blog y Recursos</h1>
-        <p className="blog-subtitle">
-          Artículos especializados y recursos para tu bienestar emocional y crecimiento personal
-        </p>
-      </div>
+    <div className="page-wrapper">
+      <div className="blog-container">
+        <div className="blog-hero">
+          <h1>Blog y Recursos</h1>
+          <p className="blog-subtitle">
+            Artículos especializados y recursos para tu bienestar emocional y crecimiento personal
+          </p>
+        </div>
 
       <div className="blog-content">
         <div className="blog-intro">
@@ -187,6 +188,7 @@ export default function Blog() {
           </form>
         </div>
       </div>
+    </div>
     </div>
   );
 }

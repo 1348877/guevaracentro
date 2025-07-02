@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import { useNavigate } from 'react-router-dom';
+import DrAlbertoProfile from '../components/DrAlbertoProfile';
+import MobileWarning from '../components/MobileWarning';
 
 export default function App() {
   const navigate = useNavigate();
@@ -14,6 +16,7 @@ export default function App() {
 
   return (
     <div className="home-container">
+      <MobileWarning />
       {/* SOLO HERO SECTION PARA PRUEBA */}
       <section className="hero-section">
         <div className="hero-content">
@@ -145,8 +148,11 @@ export default function App() {
               <div className="testimonial-content">
                 <p>"El Dr. Guevara me ayudó a superar mi ansiedad con técnicas que realmente funcionan. Su enfoque profesional y empático hizo toda la diferencia en mi proceso de recuperación."</p>
                 <div className="testimonial-author">
-                  <strong>María Elena</strong>
-                  <span>Paciente - Terapia Individual</span>
+                  <div className="testimonial-avatar">ME</div>
+                  <div className="testimonial-info">
+                    <strong>María Elena</strong>
+                    <span>Paciente - Terapia Individual</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -154,8 +160,11 @@ export default function App() {
               <div className="testimonial-content">
                 <p>"Las sesiones de coaching con PNL transformaron mi perspectiva profesional. Logré metas que parecían imposibles y desarrollé herramientas para el éxito continuo."</p>
                 <div className="testimonial-author">
-                  <strong>Carlos Mendoza</strong>
-                  <span>Coaching Empresarial</span>
+                  <div className="testimonial-avatar">CM</div>
+                  <div className="testimonial-info">
+                    <strong>Carlos Mendoza</strong>
+                    <span>Coaching Empresarial</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -163,8 +172,11 @@ export default function App() {
               <div className="testimonial-content">
                 <p>"La terapia de pareja nos enseñó a comunicarnos de manera efectiva. Aprendimos a 'discutir con estilo' y fortalecimos nuestra relación significativamente."</p>
                 <div className="testimonial-author">
-                  <strong>Ana y Jorge</strong>
-                  <span>Terapia de Pareja</span>
+                  <div className="testimonial-avatar">A&J</div>
+                  <div className="testimonial-info">
+                    <strong>Ana y Jorge</strong>
+                    <span>Terapia de Pareja</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -172,46 +184,15 @@ export default function App() {
         </div>
       </section>
 
-      {/* About Preview */}
+      {/* About Preview - Enhanced Premium Doctor Profile */}
       <section className="about-preview">
         <div className="section-container">
-          <div className="about-content">
-            <div className="about-text">
-              <h2 className="section-title">Dr. Alberto Emilio Guevara Delgado</h2>
-              <h3 className="about-subtitle">Psicólogo Clínico • Magíster en Gestión de Servicios de Salud • Coach PNL</h3>
-              <div className="about-credentials">
-                <span className="credential">Colegiatura N° 25961 - Colegio de Psicólogos del Perú</span>
-                <span className="credential">Miembro AICM N° 13931 - Asociación Internacional de Coaching y Mentoring</span>
-                <span className="credential">Universidad César Vallejo • Universidad Continental</span>
-              </div>
-              <p className="about-description">
-                Especialista en psicología organizacional de la salud con doble formación en psicología clínica 
-                y gestión de servicios sanitarios. Investigador-practicante comprometido con el bienestar mental 
-                en el contexto de sistemas de salud. Su investigación "Salud mental en el contexto de COVID-19 
-                y desempeño laboral del personal sanitario" marca un hito en la aplicación de conocimiento 
-                psicológico a problemas reales de la comunidad.
-              </p>
-              <div className="about-specialties">
-                <div className="specialty-item">
-                  <span className="specialty-icon">🎯</span>
-                  <span>Coaching Profesional con PNL</span>
-                </div>
-                <div className="specialty-item">
-                  <span className="specialty-icon">🏥</span>
-                  <span>Psicología Organizacional de la Salud</span>
-                </div>
-                <div className="specialty-item">
-                  <span className="specialty-icon">🔬</span>
-                  <span>Investigación Aplicada en Salud Mental</span>
-                </div>
-              </div>
-              <button 
-                className="btn-outline"
-                onClick={() => navigate('/equipo')}
-              >
-                Ver Perfil Completo y Credenciales
-              </button>
-            </div>
+          <h2 className="section-title">Dirección Médica de Excelencia</h2>
+          <p className="section-subtitle">Conoce al profesional detrás del Centro Psicológico Integral Guevara</p>
+          
+          <DrAlbertoProfile />
+          
+          <div className="about-stats-container">
             <div className="about-stats">
               <div className="stat-item">
                 <span className="stat-number">5+</span>

@@ -36,12 +36,29 @@ html, body, #root {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-background);
   color: var(--color-text);
+  overflow-x: hidden; /* Previene scroll horizontal */
 }
 
 * {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+}
+
+/* Prevenir zoom en inputs en iOS */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea,
+select {
+  font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
 }
 
 /* Estilos de botones */

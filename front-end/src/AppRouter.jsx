@@ -138,11 +138,11 @@ export default function AppRouter() {
         />
         {showLogin && (
           <div style={{
-            position: 'absolute',
-            top: loginPos.top,
-            left: loginPos.left,
-            transform: 'translateX(-50%)',
-            zIndex: 1000
+            position: 'fixed',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            zIndex: 9999
           }}>
             <Login
               onLogin={u => { setUser(u); handleCloseLogin(); }}
@@ -151,6 +151,20 @@ export default function AppRouter() {
               onClose={handleCloseLogin}
             />
           </div>
+        )}
+        {showLogin && (
+          <div 
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: 'rgba(0, 0, 0, 0.5)',
+              zIndex: 9998
+            }}
+            onClick={handleCloseLogin}
+          />
         )}
         {showStaff && staffPos && (
           <StaffLogin

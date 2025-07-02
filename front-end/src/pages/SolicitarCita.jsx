@@ -94,7 +94,8 @@ export default function SolicitarCita() {
   };
 
   return (
-    <div className="solicitar-cita-container">
+    <div className="page-wrapper">
+      <div className="solicitar-cita-container">
       <div className="solicitar-cita-header">
         <h1>Solicitar Cita</h1>
         <p className="solicitar-subtitle">
@@ -417,6 +418,7 @@ export default function SolicitarCita() {
           )}
         </div>
       </form>
+    </div>
     </div>
   );
 }

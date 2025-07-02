@@ -238,82 +238,25 @@ export default function ArticuloCompleto() {
       categoria: "Duelo",
       autor: "Lic. Alberto Guevara",
       contenido: `
-        <h3>Entendiendo el Duelo Colectivo</h3>
-        <p>El duelo no es solo una experiencia individual; también puede ser colectiva. Nuestra comunidad de Puno ha experimentado pérdidas significativas que han afectado a todos nosotros de diferentes maneras. Como especialista en salud mental con experiencia en investigación sobre el impacto del COVID-19 en nuestra región, comprendo la complejidad de estos procesos.</p>
-        
-        <h3>Fases del Duelo en Contexto Comunitario</h3>
-        <p>El duelo comunitario pasa por etapas similares al duelo individual, pero con características específicas:</p>
-        
-        <h4>1. Negación Colectiva</h4>
-        <p>La comunidad puede minimizar o negar el impacto de las pérdidas. Es común escuchar frases como "debemos ser fuertes" o "no podemos permitirnos sentir".</p>
-        
-        <h4>2. Ira y Búsqueda de Culpables</h4>
-        <p>Surge la necesidad de encontrar responsables. Esta etapa puede dividir a la comunidad si no se maneja adecuadamente.</p>
-        
-        <h4>3. Negociación Comunitaria</h4>
-        <p>La comunidad busca formas de "volver a como era antes" o establecer rituales para honrar a los perdidos.</p>
-        
-        <h4>4. Depresión Colectiva</h4>
-        <p>Período de tristeza profunda, apatía social y pérdida de esperanza en el futuro común.</p>
-        
-        <h4>5. Aceptación y Reconstrucción</h4>
-        <p>La comunidad acepta la nueva realidad y trabaja junta hacia la sanación y el crecimiento.</p>
-        
-        <h3>Herramientas de PNL para el Duelo</h3>
-        
-        <h4>Técnica de la Línea del Tiempo</h4>
-        <p>Esta herramienta de PNL ayuda a procesar el duelo de manera saludable:</p>
-        <ol>
-          <li>Imagina una línea que representa tu vida, donde el pasado está a tu izquierda y el futuro a tu derecha</li>
-          <li>Colócate en el presente (centro de la línea)</li>
-          <li>Observa el evento de pérdida en el pasado, reconoce su impacto pero también su lugar en tu historia</li>
-          <li>Mira hacia el futuro y visualiza cómo puedes honrar esa pérdida mientras sigues adelante</li>
-          <li>Toma aprendizajes del pasado hacia tu futuro</li>
-        </ol>
-        
-        <h4>Anclaje de Recursos Positivos</h4>
-        <p>Crear anclas mentales para acceder a recuerdos positivos de la persona o situación perdida:</p>
-        <ol>
-          <li>Recuerda un momento feliz relacionado con lo que perdiste</li>
-          <li>Intensifica esa memoria positiva</li>
-          <li>Crea un gesto físico (como tocar tu corazón) mientras revives ese momento</li>
-          <li>Úsalo cuando necesites conectar con el amor en lugar del dolor</li>
-        </ol>
-        
-        <h3>Rituales de Sanación Comunitaria</h3>
-        
-        <h4>Círculos de Palabra</h4>
-        <p>Espacios seguros donde los miembros de la comunidad pueden compartir sus experiencias sin juicio.</p>
-        
-        <h4>Memoriales Vivos</h4>
-        <p>Proyectos comunitarios que honran a los perdidos mientras benefician a los vivos, como jardines, bibliotecas o programas de ayuda.</p>
-        
-        <h4>Ceremonias de Transición</h4>
-        <p>Rituales que marcan el paso del dolor agudo hacia la integración saludable de la pérdida.</p>
-        
-        <h3>Señales de Duelo Complicado</h3>
-        <p>Busca ayuda profesional si experimentas:</p>
+        <h3>¿Qué es el Duelo?</h3>
+        <p>El duelo es una respuesta natural ante la pérdida de un ser querido, una situación o incluso una etapa de la vida. En nuestra región, el duelo colectivo también es frecuente tras eventos sociales o comunitarios.</p>
+        <h3>Fases del Duelo</h3>
         <ul>
-          <li>Negación persistente de la pérdida después de varios meses</li>
-          <li>Evitación extrema de cualquier recordatorio</li>
-          <li>Ira intensa que no disminuye con el tiempo</li>
-          <li>Depresión profunda que interfiere con la vida diaria</li>
-          <li>Síntomas físicos persistentes sin causa médica</li>
+          <li>Negación</li>
+          <li>Ira</li>
+          <li>Negociación</li>
+          <li>Depresión</li>
+          <li>Aceptación</li>
         </ul>
-        
-        <h3>Apoyo Profesional Disponible</h3>
-        <p>En el Centro Psicológico Integral Guevara ofrecemos:</p>
+        <h3>Herramientas para Sanar</h3>
         <ul>
-          <li>Terapia individual para el procesamiento del duelo</li>
-          <li>Sesiones grupales de apoyo comunitario</li>
-          <li>Técnicas especializadas de PNL para la sanación emocional</li>
-          <li>Acompañamiento en la creación de rituales personales y familiares</li>
+          <li>Hablar sobre la pérdida con personas de confianza</li>
+          <li>Participar en rituales o ceremonias de despedida</li>
+          <li>Buscar apoyo profesional si el dolor persiste</li>
+          <li>Practicar el autocuidado y la paciencia con uno mismo</li>
         </ul>
-        
         <h3>Conclusión</h3>
-        <p>El duelo es un proceso natural y necesario que, cuando se vive de manera saludable, puede fortalecer tanto al individuo como a la comunidad. No hay un cronograma fijo para sanar, pero con las herramientas adecuadas y el apoyo necesario, es posible encontrar significado y crecimiento incluso en las pérdidas más profundas.</p>
-        
-        <p><em>Recuerda: pedir ayuda no es signo de debilidad, sino de sabiduría y amor propio.</em></p>
+        <p>Sanar en comunidad es posible. El apoyo mutuo y la comprensión son claves para superar el duelo y encontrar nuevos caminos de esperanza.</p>
       `
     },
     "3": {
@@ -324,115 +267,20 @@ export default function ArticuloCompleto() {
       categoria: "Educación",
       autor: "Lic. Alberto Guevara",
       contenido: `
-        <h3>Introducción</h3>
-        <p>Como profesional certificado tanto en psicología clínica como en coaching con PNL, frecuentemente recibo la pregunta: "¿Qué necesito, psicología o coaching?". La respuesta no es simple, ya que ambos enfoques tienen valor único y pueden ser complementarios.</p>
-        
-        <h3>¿Qué es la Psicología Clínica?</h3>
-        <p>La psicología clínica se enfoca en:</p>
+        <h3>¿Psicología o Coaching?</h3>
+        <p>Ambos enfoques pueden ayudarte a crecer, pero tienen objetivos y métodos distintos.</p>
+        <h3>¿Cuándo elegir Psicología?</h3>
         <ul>
-          <li><strong>Diagnóstico y tratamiento</strong> de trastornos mentales</li>
-          <li><strong>Exploración del pasado</strong> para entender patrones actuales</li>
-          <li><strong>Sanación de traumas</strong> y heridas emocionales</li>
-          <li><strong>Trabajo profundo</strong> con emociones y pensamientos</li>
-          <li><strong>Proceso terapéutico</strong> que puede ser de largo plazo</li>
+          <li>Si tienes síntomas de ansiedad, depresión o trauma</li>
+          <li>Si necesitas sanar heridas emocionales profundas</li>
         </ul>
-        
-        <h3>¿Qué es el Coaching con PNL?</h3>
-        <p>El coaching se centra en:</p>
+        <h3>¿Cuándo elegir Coaching?</h3>
         <ul>
-          <li><strong>Logro de objetivos específicos</strong> y metas futuras</li>
-          <li><strong>Desarrollo de habilidades</strong> y competencias</li>
-          <li><strong>Cambio de patrones</strong> de pensamiento y comportamiento</li>
-          <li><strong>Optimización del rendimiento</strong> personal y profesional</li>
-          <li><strong>Procesos orientados a resultados</strong> generalmente de corto a mediano plazo</li>
+          <li>Si tienes metas claras y quieres alcanzarlas</li>
+          <li>Si buscas mejorar tu rendimiento o cambiar hábitos</li>
         </ul>
-        
-        <h3>Comparación Práctica</h3>
-        
-        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-          <thead>
-            <tr style="background-color: #ff6b35; color: white;">
-              <th style="padding: 12px; border: 1px solid #ddd;">Aspecto</th>
-              <th style="padding: 12px; border: 1px solid #ddd;">Psicología Clínica</th>
-              <th style="padding: 12px; border: 1px solid #ddd;">Coaching con PNL</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Enfoque temporal</td>
-              <td style="padding: 12px; border: 1px solid #ddd;">Pasado → Presente</td>
-              <td style="padding: 12px; border: 1px solid #ddd;">Presente → Futuro</td>
-            </tr>
-            <tr>
-              <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Duración típica</td>
-              <td style="padding: 12px; border: 1px solid #ddd;">Meses a años</td>
-              <td style="padding: 12px; border: 1px solid #ddd;">Semanas a meses</td>
-            </tr>
-            <tr>
-              <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Metodología</td>
-              <td style="padding: 12px; border: 1px solid #ddd;">Análisis y reflexión profunda</td>
-              <td style="padding: 12px; border: 1px solid #ddd;">Acción y técnicas específicas</td>
-            </tr>
-            <tr>
-              <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">Ideal para</td>
-              <td style="padding: 12px; border: 1px solid #ddd;">Problemas emocionales, traumas, trastornos</td>
-              <td style="padding: 12px; border: 1px solid #ddd;">Metas, cambios de hábitos, rendimiento</td>
-            </tr>
-          </tbody>
-        </table>
-        
-        <h3>¿Cuándo Elegir Psicología?</h3>
-        <p>Considera la psicología clínica si:</p>
-        <ul>
-          <li>Experimentas síntomas de ansiedad, depresión o trauma</li>
-          <li>Tienes patrones de pensamiento o comportamiento que te lastiman</li>
-          <li>Necesitas procesar experiencias pasadas dolorosas</li>
-          <li>Buscas entender profundamente tus emociones y reacciones</li>
-          <li>Requieres un diagnóstico profesional</li>
-        </ul>
-        
-        <h3>¿Cuándo Elegir Coaching?</h3>
-        <p>El coaching es ideal si:</p>
-        <ul>
-          <li>Tienes metas claras que quieres alcanzar</li>
-          <li>Necesitas mejorar tu rendimiento profesional o personal</li>
-          <li>Quieres cambiar hábitos específicos</li>
-          <li>Buscas desarrollar habilidades de liderazgo o comunicación</li>
-          <li>Te sientes "estancado" pero sin problemas emocionales graves</li>
-        </ul>
-        
-        <h3>El Enfoque Integral: Lo Mejor de Ambos Mundos</h3>
-        <p>En el Centro Psicológico Integral Guevara, ofrecemos un enfoque único que combina ambas metodologías:</p>
-        
-        <h4>Ventajas del Enfoque Integral:</h4>
-        <ul>
-          <li><strong>Diagnóstico preciso:</strong> Identificamos si hay aspectos clínicos que atender</li>
-          <li><strong>Sanación profunda:</strong> Trabajamos las raíces emocionales de los problemas</li>
-          <li><strong>Herramientas prácticas:</strong> Aplicamos técnicas de PNL para cambios rápidos</li>
-          <li><strong>Orientación a resultados:</strong> Mantenemos el foco en tus objetivos</li>
-          <li><strong>Flexibilidad:</strong> Adaptamos el enfoque según tu progreso</li>
-        </ul>
-        
-        <h3>Casos Prácticos</h3>
-        
-        <h4>Caso 1: María, 35 años</h4>
-        <p><strong>Situación:</strong> Ansiedad severa que le impide trabajar eficientemente</p>
-        <p><strong>Enfoque recomendado:</strong> Iniciar con psicología para manejar la ansiedad, luego coaching para optimizar su rendimiento laboral</p>
-        
-        <h4>Caso 2: Juan, 28 años</h4>
-        <p><strong>Situación:</strong> Quiere mejorar sus habilidades de liderazgo para un ascenso</p>
-        <p><strong>Enfoque recomendado:</strong> Coaching con PNL enfocado en desarrollo de habilidades interpersonales y confianza</p>
-        
-        <h4>Caso 3: Ana, 42 años</h4>
-        <p><strong>Situación:</strong> Divorcio reciente, necesita sanar y redefinir sus metas de vida</p>
-        <p><strong>Enfoque recomendado:</strong> Enfoque integral que combine terapia para el duelo con coaching para planificación de nueva vida</p>
-        
         <h3>Conclusión</h3>
-        <p>No existe una respuesta única a la pregunta "¿psicología o coaching?". La elección depende de tus necesidades específicas, tu situación actual y tus objetivos. En nuestro centro, realizamos una evaluación inicial gratuita para determinar el enfoque más beneficioso para ti.</p>
-        
-        <p>Recuerda: buscar ayuda profesional, sea psicológica o de coaching, es una inversión en tu bienestar y crecimiento personal. Ambos caminos pueden llevarte a una vida más plena y satisfactoria.</p>
-        
-        <p><em>¿Tienes dudas sobre cuál enfoque es mejor para ti? Contáctanos para una consulta inicial donde evaluaremos juntos el camino más adecuado para tus necesidades.</em></p>
+        <p>La elección depende de tus necesidades. Consulta con un profesional para recibir orientación personalizada.</p>
       `
     },
     "4": {
@@ -444,111 +292,16 @@ export default function ArticuloCompleto() {
       autor: "Lic. Alberto Guevara",
       contenido: `
         <h3>¿Qué es la Resiliencia?</h3>
-        <p>La resiliencia es la capacidad humana de adaptarse positivamente a situaciones adversas, trauma, tragedia, amenazas o fuentes significativas de estrés. No se trata de evitar las dificultades, sino de aprender a navegar a través de ellas y emerger fortalecidos.</p>
-        
-        <p>Como psicólogo especialista en PNL y con experiencia en investigación sobre burnout en profesionales de la salud, he observado que la resiliencia no es un rasgo innato, sino una habilidad que se puede desarrollar y fortalecer a lo largo de la vida.</p>
-        
-        <h3>Los Pilares de la Resiliencia</h3>
-        
-        <h4>1. Autoconciencia Emocional</h4>
-        <p>La capacidad de reconocer, entender y gestionar nuestras propias emociones es fundamental para la resiliencia.</p>
-        
-        <h4>2. Flexibilidad Cognitiva</h4>
-        <p>La habilidad de adaptar nuestros pensamientos y perspectivas ante nuevas situaciones.</p>
-        
-        <h4>3. Conexiones Sociales Sólidas</h4>
-        <p>Las relaciones de apoyo proporcionan recursos emocionales y prácticos durante tiempos difíciles.</p>
-        
-        <h4>4. Propósito y Significado</h4>
-        <p>Tener un sentido claro de dirección y valores que guíen nuestras acciones.</p>
-        
-        <h4>5. Cuidado Personal</h4>
-        <p>Mantener la salud física y mental como base para enfrentar desafíos.</p>
-        
-        <h3>Técnicas de PNL para Desarrollar Resiliencia</h3>
-        
-        <h4>Técnica 1: Reencuadre de Experiencias</h4>
-        <p>Esta técnica de PNL te ayuda a cambiar la perspectiva sobre eventos difíciles:</p>
-        <ol>
-          <li><strong>Identifica el evento:</strong> Piensa en una situación difícil reciente</li>
-          <li><strong>Encuentra el aprendizaje:</strong> Pregúntate "¿Qué he aprendido de esto?"</li>
-          <li><strong>Busca el recurso:</strong> "¿Qué fortalezas descubrí en mí mismo?"</li>
-          <li><strong>Proyecta al futuro:</strong> "¿Cómo me ayudará esta experiencia en el futuro?"</li>
-        </ol>
-        
-        <h4>Técnica 2: Anclaje de Estados Resourceful</h4>
-        <p>Crear acceso rápido a estados emocionales de fortaleza:</p>
-        <ol>
-          <li>Recuerda un momento en que te sentiste completamente capaz y fuerte</li>
-          <li>Intensifica esa sensación con todos tus sentidos</li>
-          <li>En el pico de esa sensación, crea un gesto físico (como cerrar el puño)</li>
-          <li>Repite este proceso varias veces</li>
-          <li>Usa el gesto cuando necesites acceder a esa fortaleza</li>
-        </ol>
-        
-        <h4>Técnica 3: Modelado de Resiliencia</h4>
-        <p>Aprender de personas resilientes en tu entorno:</p>
-        <ol>
-          <li>Identifica a alguien que admires por su capacidad de superar dificultades</li>
-          <li>Observa sus estrategias mentales y comportamentales</li>
-          <li>Pregúntale sobre su proceso interno</li>
-          <li>Adapta sus estrategias a tu propio estilo</li>
-        </ol>
-        
-        <h3>Ejercicios Prácticos Diarios</h3>
-        
-        <h4>Ejercicio 1: Diario de Gratitud Resiliente</h4>
-        <p>Cada noche, escribe:</p>
+        <p>La resiliencia es la capacidad de adaptarse y superar situaciones difíciles. Se puede fortalecer con técnicas psicológicas y apoyo social.</p>
+        <h3>Estrategias para Desarrollar Resiliencia</h3>
         <ul>
-          <li>3 cosas por las que te sientes agradecido</li>
-          <li>1 desafío que enfrentaste y cómo lo manejaste</li>
-          <li>1 fortaleza que descubriste o usaste hoy</li>
+          <li>Buscar apoyo en familia y amigos</li>
+          <li>Practicar el autocuidado</li>
+          <li>Aprender de experiencias pasadas</li>
+          <li>Establecer metas realistas</li>
         </ul>
-        
-        <h4>Ejercicio 2: Visualización de Futuro Resiliente</h4>
-        <p>Dedica 10 minutos diarios a visualizar:</p>
-        <ol>
-          <li>Tu yo futuro habiendo superado los desafíos actuales</li>
-          <li>Las habilidades y fortalezas que habrás desarrollado</li>
-          <li>Cómo estarás ayudando a otros con tu experiencia</li>
-        </ol>
-        
-        <h4>Ejercicio 3: Red de Apoyo Consciente</h4>
-        <p>Cada semana:</p>
-        <ul>
-          <li>Contacta a al menos una persona de tu red de apoyo</li>
-          <li>Ofrece apoyo a alguien que lo necesite</li>
-          <li>Identifica nuevas personas que podrían fortalecer tu red</li>
-        </ul>
-        
-        <h3>Resiliencia en el Contexto de Puno</h3>
-        <p>Nuestra región de Puno tiene una rica historia de resiliencia colectiva. Desde nuestros ancestros que sobrevivieron a conquistadores y colonizadores, hasta las comunidades actuales que enfrentan desafíos económicos y sociales con creatividad y unión.</p>
-        
-        <h4>Fortalezas Culturales que Nutren la Resiliencia:</h4>
-        <ul>
-          <li><strong>Ayni (reciprocidad):</strong> El principio de apoyo mutuo</li>
-          <li><strong>Sumak Kausay (buen vivir):</strong> Una visión holística del bienestar</li>
-          <li><strong>Conexión con la naturaleza:</strong> La Pachamama como fuente de fortaleza</li>
-          <li><strong>Sabiduría ancestral:</strong> Conocimientos transmitidos por generaciones</li>
-          <li><strong>Celebración comunitaria:</strong> Fiestas y rituales que fortalecen lazos</li>
-        </ul>
-        
-        <h3>Cuándo Buscar Ayuda Profesional</h3>
-        <p>Aunque la resiliencia se puede desarrollar independientemente, considera buscar apoyo profesional si:</p>
-        <ul>
-          <li>Te sientes abrumado por mucho tiempo</li>
-          <li>Los desafíos interfieren significativamente con tu vida diaria</li>
-          <li>Experimentas síntomas de depresión o ansiedad persistentes</li>
-          <li>Sientes que no puedes hacer frente a las demandas de la vida</li>
-          <li>Quieres desarrollar habilidades específicas de resiliencia</li>
-        </ul>
-        
         <h3>Conclusión</h3>
-        <p>La resiliencia no es la ausencia de dolor o dificultad; es la capacidad de crecer a través de ellos. Como comunidad puneña, tenemos recursos únicos y profundos para desarrollar esta capacidad. La combinación de nuestras fortalezas culturales con técnicas modernas de PNL puede crear una resiliencia poderosa y auténtica.</p>
-        
-        <p>Recuerda: cada desafío superado se convierte en una prueba de tu capacidad y una herramienta para futuros obstáculos. Tu resiliencia no solo te beneficia a ti, sino que inspira y fortalece a toda tu comunidad.</p>
-        
-        <p><em>Si deseas desarrollar tu resiliencia de manera más profunda y personalizada, nuestro enfoque integral de psicología y coaching puede proporcionarte las herramientas específicas que necesitas.</em></p>
+        <p>La resiliencia se construye día a día. No dudes en buscar ayuda profesional si lo necesitas.</p>
       `
     },
     "5": {
@@ -570,7 +323,7 @@ export default function ArticuloCompleto() {
         <p><strong>Ejemplo destructivo:</strong> "Siempre eres irresponsable y egoísta"</p>
         <p><strong>Alternativa constructiva:</strong> "Me siento preocupado cuando no avisas que llegarás tarde"</p>
         
-        <h4>2. La Defensividad</h4>
+        <h4>2. La Defensiva</h4>
         <p><strong>Qué es:</strong> Responder a las quejas como si fueras una víctima inocente.</p>
         <p><strong>Ejemplo destructivo:</strong> "Yo no tengo la culpa, tú también lo haces"</p>
         <p><strong>Alternativa constructiva:</strong> "Entiendo tu punto, déjame explicarte mi perspectiva"</p>
@@ -959,30 +712,33 @@ export default function ArticuloCompleto() {
 
       {/* Article Header */}
       <header className="articulo-header">
-        <div className="articulo-meta-top">
-          <span className="categoria-badge">{articulo.categoria}</span>
-          <div className="meta-info">
-            <span className="fecha">
-              <i className="fas fa-calendar-alt"></i>
+        {/* Badge de categoría */}
+        <div className="categoria-badge" style={{boxShadow:'0 2px 12px rgba(255,107,53,0.13)',background:'linear-gradient(90deg,#ff9800 60%,#f57c00 100%)',borderRadius:'14px 6px 14px 6px',fontSize:'0.9rem',padding:'7px 18px',fontWeight:800,letterSpacing:'0.7px',marginBottom:'18px',display:'inline-block'}}>{articulo.categoria}</div>
+        {/* Título principal */}
+        <h1 className="articulo-titulo" style={{fontSize:'2.7rem',fontWeight:900,letterSpacing:'-1px',color:'#1a2332',marginBottom:'18px',lineHeight:'1.13',textShadow:'0 2px 8px #fff8,0 1px 0 #fff'}}> {articulo.titulo} </h1>
+        {/* Resumen/subtítulo */}
+        <p className="articulo-resumen" style={{fontSize:'1.18rem',color:'#5a6c7d',marginBottom:'28px',fontWeight:500,lineHeight:'1.6',background:'#f8f9fa',padding:'18px 22px',borderRadius:'10px',boxShadow:'0 1px 8px #eee'}}> {articulo.resumen} </p>
+        {/* Información del autor y metadatos en una sola caja visual */}
+        <div style={{display:'flex',flexWrap:'wrap',alignItems:'center',gap:'18px',background:'#f6f8fa',borderRadius:'12px',padding:'18px 22px',boxShadow:'0 2px 12px #e9ecef',marginBottom:'10px',border:'1px solid #e9ecef'}}>
+          <div className="autor-info" style={{marginBottom:0}}>
+            <div className="autor-avatar" style={{background:'#ff9800',width:'44px',height:'44px',display:'flex',alignItems:'center',justifyContent:'center',borderRadius:'50%',color:'#fff',fontSize:'1.2rem'}}>
+              <i className="fas fa-user-md"></i>
+            </div>
+            <div className="autor-texto">
+              <span className="autor-nombre" style={{fontWeight:700,color:'#ff9800',fontSize:'1.01rem'}}>Por {articulo.autor}</span>
+              <span className="autor-especialidad" style={{color:'#6c7b8a',fontSize:'0.91rem'}}>Psicólogo Clínico Especialista</span>
+            </div>
+          </div>
+          <div className="articulo-meta" style={{border:'none',padding:'0',marginBottom:0,display:'flex',alignItems:'center',gap:'14px',fontSize:'0.98rem',color:'#888'}}>
+            <span className="meta-fecha" style={{display:'flex',alignItems:'center',gap:'6px'}}>
+              <i className="fas fa-calendar-alt" style={{color:'#ff9800'}}></i>
               {articulo.fechaPublicacion}
             </span>
-            <span className="tiempo-lectura">
-              <i className="fas fa-clock"></i>
+            <span className="meta-separador" style={{color:'#bbb',fontWeight:'bold'}}>•</span>
+            <span className="meta-tiempo" style={{display:'flex',alignItems:'center',gap:'6px'}}>
+              <i className="fas fa-clock" style={{color:'#ff9800'}}></i>
               {articulo.tiempoLectura} de lectura
             </span>
-          </div>
-        </div>
-        
-        <h1 className="articulo-titulo">{articulo.titulo}</h1>
-        <p className="articulo-resumen">{articulo.resumen}</p>
-        
-        <div className="autor-section">
-          <div className="autor-avatar">
-            <i className="fas fa-user-md"></i>
-          </div>
-          <div className="autor-details">
-            <span className="autor-nombre">{articulo.autor}</span>
-            <span className="autor-especialidad">Psicólogo Clínico Especialista</span>
           </div>
         </div>
       </header>
