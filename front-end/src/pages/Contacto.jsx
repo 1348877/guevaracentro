@@ -127,18 +127,20 @@ export default function Contacto() {
         <h2>Encuéntranos</h2>
         <div className="mapa-container">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.8767!2d-70.1329!3d-15.4992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDI5JzU3LjEiUyA3MMKwMDcnNTguNCJX!5e0!3m2!1ses!2spe!4v1609459200000!5m2!1ses!2spe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3840.5274!2d-70.1357!3d-15.4905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9167f316c9b6c33f%3A0x4c5b6b5b6b5b6b5b!2sIndependencia%20211%2C%20Juliaca%2021101%2C%20Per%C3%BA!5e0!3m2!1ses!2spe!4v1640995200000!5m2!1ses!2spe"
             width="100%"
-            height="300"
+            height="350"
             style={{ border: 0, borderRadius: '12px' }}
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Ubicación Centro Psicológico Integral Guevara"
+            title="Centro Psicológico Integral Guevara - Independencia 211, Juliaca"
           ></iframe>
         </div>
         <p className="mapa-descripcion">
-          Independencia 211, Juliaca - Fácil acceso y ubicación céntrica
+          📍 <strong>Independencia 211, Juliaca, Puno</strong><br/>
+          Ubicación céntrica de fácil acceso • A pocos minutos del centro de la ciudad<br/>
+          <small>Atención presencial y virtual disponible</small>
         </p>
       </div>
 

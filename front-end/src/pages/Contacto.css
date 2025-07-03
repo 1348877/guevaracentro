@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 140px; /* Space for fixed navbar */
+  padding-top: 120px; /* Space for fixed navbar */
   padding-bottom: 40px;
   box-sizing: border-box;
 }
@@ -167,29 +167,66 @@
 }
 
 .mapa-section {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  padding: 2rem 0;
 }
 
 .mapa-section h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #222;
-  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 2rem;
   text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.mapa-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #4A90E2, #ff9800);
+  border-radius: 2px;
 }
 
 .mapa-container {
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  margin-bottom: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 4px 16px rgba(255, 152, 0, 0.08);
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(74, 144, 226, 0.1);
+}
+
+.mapa-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(74, 144, 226, 0.15), 0 6px 20px rgba(255, 152, 0, 0.1);
 }
 
 .mapa-descripcion {
   text-align: center;
-  font-size: 1rem;
-  color: #666;
-  font-style: italic;
+  font-size: 1.1rem;
+  color: #1a1a2e;
+  line-height: 1.6;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8fafe 0%, #eef4ff 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(74, 144, 226, 0.1);
+}
+
+.mapa-descripcion strong {
+  color: #4A90E2;
+  font-weight: 700;
+}
+
+.mapa-descripcion small {
+  color: #ff9800;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .urgencias-section {

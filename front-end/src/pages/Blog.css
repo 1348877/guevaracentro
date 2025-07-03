@@ -21,7 +21,7 @@
 }
 
 .blog-hero {
-  text-align: center;
+  text-align: center; 
   margin-top: 6rem;
   margin-bottom: 3rem;
 }
@@ -344,6 +344,11 @@
   .blog-container {
     padding: 1rem;
     max-width: 100%;
+  }
+
+  .blog-hero {
+    margin-top: 3.5rem;
+    margin-bottom: 2rem;
   }
 
   .blog-hero h1 {
