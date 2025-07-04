@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Navbar.css';
-import { FaLock, FaBars, FaTimes, FaUser } from 'react-icons/fa';
+import { FaLock, FaBars, FaTimes, FaUser, FaTachometerAlt } from 'react-icons/fa';
 
 const Navbar = ({ user, onLoginClick, onLogout, showLogin, loginBtnRef, staffBtnRef, onStaffToggle, showStaff, onStaffLogin, staffPos }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -58,10 +58,10 @@ const Navbar = ({ user, onLoginClick, onLogout, showLogin, loginBtnRef, staffBtn
           <Link to="/solicitar-cita" className={`navbar-link navbar-link-cta ${location.pathname === '/solicitar-cita' ? 'active' : ''}`} onClick={closeMobileMenu}>
             Solicitar Cita
           </Link>
-          {user && (
-            <Link to="/perfil" className={`navbar-link ${location.pathname === '/perfil' ? 'active' : ''}`} onClick={closeMobileMenu}>
-              <FaUser style={{marginRight: '6px'}} />
-              Mi Perfil
+          {user && ['admin', 'secretaria', 'psicologo'].includes(user.rol) && (
+            <Link to="/dashboard" className={`navbar-link ${location.pathname === '/dashboard' ? 'active' : ''}`} onClick={closeMobileMenu}>
+              <FaTachometerAlt style={{marginRight: '6px'}} />
+              Dashboard
             </Link>
           )}
         </div>

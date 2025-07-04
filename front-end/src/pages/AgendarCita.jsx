@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getPacientes } from '../services/pacientesService';
+import PacientesService from '../services/pacientesService';
 import { createCita } from '../services/citasService';
 import CalendarioOcupacion from '../components/CalendarioOcupacion';
 import { useNavigate } from 'react-router-dom';
@@ -22,7 +22,7 @@ export default function AgendarCita() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    getPacientes().then(setPacientes);
+    PacientesService.getPacientes().then(setPacientes);
   }, []);
 
   // Guardar datos de cita en localStorage

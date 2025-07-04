@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getPacientes } from '../services/pacientesService';
+import PacientesService from '../services/pacientesService';
 
 export default function Pacientes() {
   const [pacientes, setPacientes] = useState([]);
@@ -7,7 +7,7 @@ export default function Pacientes() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    getPacientes()
+    PacientesService.getPacientes()
       .then(setPacientes)
       .catch(err => setError(err.message))
       .finally(() => setLoading(false));

@@ -1,21 +1,49 @@
 const express = require('express');
 const router = express.Router();
 const citaController = require('../controllers/citaController');
-const { getOcupacionMensual } = require('../controllers/citaOcupacionController');
-const { bloquearHorario, liberarHorario, getBloqueosDia } = require('../controllers/bloqueoHorarioController');
-const { authenticateToken, authorizeRoles } = require('../middleware/authMiddleware');
+const authMiddleware = require('../middleware/authMiddleware');
 
-// Rutas para Cita
-// Listar y ver citas: psicologo, secretaria, admin pueden ver todas; paciente solo las suyas (esto se refina en el controlador)
-router.get('/', authenticateToken, authorizeRoles('secretaria', 'admin', 'psicologo'), citaController.getAllCitas);
-router.post('/', authenticateToken, authorizeRoles('secretaria', 'admin', 'psicologo', 'paciente'), citaController.createCita);
-router.get('/:id', authenticateToken, authorizeRoles('secretaria', 'admin', 'psicologo', 'paciente'), citaController.getCitaById);
-router.delete('/:id', authenticateToken, authorizeRoles('secretaria', 'admin'), citaController.deleteCita);
+// Aplicar middleware de autenticación a todas las rutas
+router.use(authMiddleware.authenticateToken);
 
-// Ocupación y bloqueos: solo staff
-router.get('/ocupacion', authenticateToken, authorizeRoles('secretaria', 'admin', 'psicologo'), getOcupacionMensual);
-router.post('/bloquear', authenticateToken, authorizeRoles('secretaria', 'admin'), bloquearHorario);
-router.post('/liberar', authenticateToken, authorizeRoles('secretaria', 'admin'), liberarHorario);
-router.get('/bloqueos', authenticateToken, authorizeRoles('secretaria', 'admin', 'psicologo'), getBloqueosDia);
+// Rutas para gestión de citas
+router.get('/', 
+  authMiddleware.authorize(['admin', 'secretaria', 'psicologo', 'paciente']), 
+  citaController.getAllCitas
+);
+
+router.post('/', 
+  authMiddleware.authorize(['admin', 'secretaria', 'psicologo', 'paciente']), 
+  citaController.createCita
+);
+
+router.get('/horarios-disponibles', 
+  citaController.getHorariosDisponibles
+);
+
+router.get('/:id', 
+  authMiddleware.authorize(['admin', 'secretaria', 'psicologo', 'paciente']), 
+  citaController.getCitaById
+);
+
+router.put('/:id/confirmar', 
+  authMiddleware.authorize(['admin', 'secretaria', 'psicologo']), 
+  citaController.confirmarCita
+);
+
+router.put('/:id/cancelar', 
+  authMiddleware.authorize(['admin', 'secretaria', 'psicologo', 'paciente']), 
+  citaController.cancelarCita
+);
+
+router.put('/:id/estado', 
+  authMiddleware.authorize(['admin', 'secretaria', 'psicologo']), 
+  citaController.actualizarEstadoCita
+);
+
+router.delete('/:id', 
+  authMiddleware.authorize(['admin']), 
+  citaController.deleteCita
+);
 
 module.exports = router;

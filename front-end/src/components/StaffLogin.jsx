@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import AuthService from '../services/authService';
 import './StaffLogin.css';
 
 export default function StaffLogin({ onSuccess, open, onClose, panelPos }) {
@@ -27,16 +28,13 @@ export default function StaffLogin({ onSuccess, open, onClose, panelPos }) {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch('/api/auth/login-staff', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password })
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Error de autenticación');
+      console.log('🔐 StaffLogin - Iniciando login para:', email);
+      const data = await AuthService.login(email, password);
+      console.log('🔐 StaffLogin - Login exitoso:', data);
       onSuccess(data);
       onClose();
     } catch (err) {
+      console.error('❌ StaffLogin - Error:', err);
       setError(err.message);
     } finally {
       setLoading(false);

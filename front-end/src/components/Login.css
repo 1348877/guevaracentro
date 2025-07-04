@@ -39,6 +39,24 @@
   opacity: 0;
 }
 
+/* Nuevos estilos para las transiciones de email y código */
+.login-step.email-enter {
+  transform: translateX(100%); 
+  opacity: 0;
+}
+.login-step.email-active {
+  transform: translateX(0); 
+  opacity: 1;
+}
+.login-step.codigo-enter {
+  transform: translateX(100%); 
+  opacity: 0;
+}
+.login-step.codigo-active {
+  transform: translateX(0); 
+  opacity: 1;
+}
+
 /* Estilos base para el componente Login */
 .login-container {
   width: 320px;
@@ -172,6 +190,31 @@
   font-size: 0.93rem;
 }
 
+.login-btn-email {
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.login-btn-email:hover {
+  background: linear-gradient(135deg, #e55a2e, #e08419);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.login-btn-email:active {
+  transform: translateY(0);
+}
+
 .login-input {
   width: 100%;
   margin-bottom: 6px;
@@ -190,6 +233,30 @@
 .login-container.small .login-input {
   padding: 6px;
   font-size: 0.98rem;
+}
+
+.login-input {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+  box-sizing: border-box;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #ff6b35;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.login-input:disabled {
+  background: #f1f3f4;
+  color: #6c757d;
+  cursor: not-allowed;
 }
 
 .login-btn-action {
@@ -212,10 +279,69 @@
   padding: 7px 0;
 }
 
-.login-error {
-  color: red;
+.login-btn-action {
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.login-btn-action:hover:not(:disabled) {
+  background: linear-gradient(135deg, #e55a2e, #e08419);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.login-btn-action:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Botón secundario */
+.login-btn-secondary {
+  background: transparent;
+  color: #6c757d;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
   margin-top: 8px;
-  font-size: 1rem;
+}
+
+.login-btn-secondary:hover:not(:disabled) {
+  border-color: #ff6b35;
+  color: #ff6b35;
+}
+
+/* Mensaje de información */
+.login-info {
+  font-size: 14px;
+  color: #6c757d;
+  margin: 0 0 16px 0;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Mensaje de error mejorado */
+.login-error {
+  background: #ffe6e6;
+  color: #d63384;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  border: 1px solid #f5c2c7;
+  text-align: center;
 }
 
 .login-container.small .login-error {
