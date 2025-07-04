@@ -67,3 +67,26 @@ exports.loginStaff = async (req, res) => {
     res.status(500).json({ error: 'Error en login staff', detalle: error.message });
   }
 };
+
+// Login clásico para pacientes (usuario/contraseña)
+exports.loginPatient = async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const usuario = await Usuario.findOne({ where: { email } });
+    if (!usuario || !usuario.password) {
+      return res.status(401).json({ error: 'Credenciales inválidas' });
+    }
+    // Solo pacientes pueden acceder
+    if (usuario.rol !== 'paciente') {
+      return res.status(403).json({ error: 'Acceso denegado - Use el login de staff' });
+    }
+    const valid = await bcrypt.compare(password, usuario.password);
+    if (!valid) {
+      return res.status(401).json({ error: 'Credenciales inválidas' });
+    }
+    const token = jwt.sign({ id: usuario.id, email: usuario.email, rol: usuario.rol }, process.env.JWT_SECRET, { expiresIn: '7d' });
+    res.json({ token, usuario });
+  } catch (error) {
+    res.status(500).json({ error: 'Error en login paciente', detalle: error.message });
+  }
+};

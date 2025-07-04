@@ -33,14 +33,14 @@ export default function Login({ onLogin, small, isClosing, onClose }) {
     setError(null);
   };
 
-  // Login tradicional con email y password
+  // Login tradicional con email y password (para pacientes)
   const handleEmailLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
 
     try {
-      const result = await AuthService.login(formData.email, formData.password);
+      const result = await AuthService.loginPatient(formData.email, formData.password);
       onLogin(result);
     } catch (err) {
       setError(err.message);

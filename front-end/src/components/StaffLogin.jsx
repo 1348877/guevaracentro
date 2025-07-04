@@ -29,7 +29,7 @@ export default function StaffLogin({ onSuccess, open, onClose, panelPos }) {
     setError('');
     try {
       console.log('🔐 StaffLogin - Iniciando login para:', email);
-      const data = await AuthService.login(email, password);
+      const data = await AuthService.loginStaff(email, password);
       console.log('🔐 StaffLogin - Login exitoso:', data);
       onSuccess(data);
       onClose();

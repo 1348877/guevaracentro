@@ -2,6 +2,115 @@ const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
 // Servicio para autenticación
 class AuthService {
+  // Login para pacientes (usando /api/auth/login)
+  static async loginPatient(email, password) {
+    console.log('🔐 AuthService.loginPatient - Iniciando login para paciente:', email);
+    
+    try {
+      const response = await fetch(`${API_BASE_URL}/auth/login`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+      
+      console.log('🔐 AuthService.loginPatient - Respuesta recibida:', response.status);
+      
+      if (!response.ok) {
+        let errorMessage = 'Error en el login';
+        try {
+          const error = await response.json();
+          errorMessage = error.message || error.error || errorMessage;
+        } catch (e) {
+          errorMessage = `Error ${response.status}: ${response.statusText}`;
+        }
+        throw new Error(errorMessage);
+      }
+      
+      const data = await response.json();
+      
+      console.log('🔐 AuthService.loginPatient - Datos recibidos del backend:', data);
+      
+      // El backend devuelve { token, usuario }, adaptamos la estructura
+      const user = data.usuario || data.user;
+      
+      console.log('🔐 AuthService.loginPatient - Usuario extraído:', user);
+      console.log('🔐 AuthService.loginPatient - Token extraído:', data.token);
+      
+      // Guardar token y datos del usuario
+      console.log('🔐 AuthService.loginPatient - Guardando en localStorage...');
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('user', JSON.stringify(user));
+      
+      console.log('🔐 AuthService.loginPatient - Guardado completado');
+      
+      // Devolver datos consistentes
+      return {
+        ...data,
+        user: user
+      };
+    } catch (error) {
+      console.error('❌ AuthService.loginPatient - Error:', error);
+      throw error;
+    }
+  }
+
+  // Login para staff (admin, secretaria, psicólogo) usando /api/auth/login-staff
+  static async loginStaff(email, password) {
+    console.log('🔐 AuthService.loginStaff - Iniciando login para staff:', email);
+    
+    try {
+      const response = await fetch(`${API_BASE_URL}/auth/login-staff`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+      
+      console.log('🔐 AuthService.loginStaff - Respuesta recibida:', response.status);
+      
+      if (!response.ok) {
+        let errorMessage = 'Error en el login';
+        try {
+          const error = await response.json();
+          errorMessage = error.message || error.error || errorMessage;
+        } catch (e) {
+          errorMessage = `Error ${response.status}: ${response.statusText}`;
+        }
+        throw new Error(errorMessage);
+      }
+      
+      const data = await response.json();
+      
+      console.log('🔐 AuthService.loginStaff - Datos recibidos del backend:', data);
+      
+      // El backend devuelve { token, usuario }, adaptamos la estructura
+      const user = data.usuario || data.user;
+      
+      console.log('🔐 AuthService.loginStaff - Usuario extraído:', user);
+      console.log('🔐 AuthService.loginStaff - Token extraído:', data.token);
+      
+      // Guardar token y datos del usuario
+      console.log('🔐 AuthService.loginStaff - Guardando en localStorage...');
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('user', JSON.stringify(user));
+      
+      console.log('🔐 AuthService.loginStaff - Guardado completado');
+      
+      // Devolver datos consistentes
+      return {
+        ...data,
+        user: user
+      };
+    } catch (error) {
+      console.error('❌ AuthService.loginStaff - Error:', error);
+      throw error;
+    }
+  }
+
+  // Método genérico login que mantiene compatibilidad hacia atrás
   static async login(email, password) {
     console.log('🔐 AuthService.login - Iniciando login para:', email);
     
