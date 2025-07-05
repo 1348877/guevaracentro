@@ -176,9 +176,18 @@ centro-psicologico-integral-guevara/
 
 ### Credenciales de Prueba
 ```
-Email: admin@psicologiaguevara.com
-Password: 123456
-Rol: Admin
+Admin
+admin@psicologiaguevara.com / 123456
+Debería ver: estadísticas generales, gestión de usuarios, etc.
+👩‍💼 Secretaria
+secretaria@psicologiaguevara.com / 123456
+Debería ver: citas del día, gestión de citas pendientes
+👨‍⚕️ Psicólogo
+carlos@psicologiaguevara.com / 123456
+Debería ver: sus citas del día, pacientes asignados
+🧑‍🦱 Paciente
+juan@email.com / 123456
+Debería ver: próximas citas, historial personal
 ```
 
 ### Endpoints Principales
@@ -225,13 +234,6 @@ Rol: Admin
 
 Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
 
-## 📞 Contacto
 
-**Centro Psicológico Integral Guevara**
-- Email: contacto@psicologiaguevara.com
-- Teléfono: +57 300 123 4567
-- Dirección: Calle 123 #45-67, Bogotá, Colombia
-
----
 
 ⭐ **¡Dale una estrella a este proyecto si te fue útil!**
