@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo circular -->
+  <circle cx="60" cy="60" r="58" fill="#667eea" stroke="#5a67d8" stroke-width="4"/>
+  
+  <!-- Símbolo de psicología (cerebro estilizado) -->
+  <g transform="translate(20, 20)">
+    <!-- Cabeza -->
+    <path d="M40 25 C50 15, 70 15, 80 25 C85 35, 85 45, 80 55 C75 65, 65 70, 50 70 C35 70, 25 65, 20 55 C15 45, 15 35, 20 25 Z" 
+          fill="#ffffff" opacity="0.9"/>
+    
+    <!-- Ondas cerebrales -->
+    <path d="M30 40 Q40 35, 50 40 Q60 45, 70 40" 
+          stroke="#5a67d8" stroke-width="2" fill="none" opacity="0.7"/>
+    <path d="M30 50 Q40 45, 50 50 Q60 55, 70 50" 
+          stroke="#5a67d8" stroke-width="2" fill="none" opacity="0.7"/>
+    
+    <!-- Corazón pequeño (símbolo de cuidado) -->
+    <path d="M45 55 C45 52, 48 50, 50 52 C52 50, 55 52, 55 55 C55 58, 50 62, 50 62 C50 62, 45 58, 45 55 Z" 
+          fill="#ff6b6b" opacity="0.8"/>
+  </g>
+  
+  <!-- Texto -->
+  <text x="60" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">
+    CENTRO GUEVARA
+  </text>
+  <text x="60" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#ffffff" opacity="0.8">
+    PSICOLOGÍA
+  </text>
+</svg>

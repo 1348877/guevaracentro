@@ -1,0 +1,493 @@
+/* Solicitar Cita Nueva Styles */
+.solicitar-cita-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.solicitar-cita-container {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+.solicitar-cita-container.success {
+  max-width: 400px;
+  padding: 40px;
+  text-align: center;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.solicitar-cita-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 30px;
+  border-bottom: 1px solid #e8ecef;
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  color: white;
+  border-radius: 20px 20px 0 0;
+}
+
+.solicitar-cita-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Progress Bar */
+.progress-bar {
+  padding: 30px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e8ecef;
+}
+
+.progress-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.progress-steps::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #e8ecef;
+  z-index: 1;
+}
+
+.step {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e8ecef;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0 40px;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.step.active {
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #6c757d;
+  font-weight: 500;
+  padding: 0 20px;
+}
+
+/* Form Styles */
+.solicitar-cita-form {
+  padding: 30px;
+}
+
+.form-step {
+  min-height: 400px;
+}
+
+.form-step h3 {
+  color: #2c3e50;
+  margin: 0 0 30px 0;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid #e8ecef;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #ff6b35;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Selected Info */
+.selected-info {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  border-left: 4px solid #ff6b35;
+}
+
+.selected-info p {
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+.selected-info p:last-child {
+  margin-bottom: 0;
+}
+
+.selected-info strong {
+  color: #ff6b35;
+}
+
+/* Horarios Grid */
+.loading-horarios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #ff6b35;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.horarios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.horario-slot {
+  background: #f8f9fa;
+  border: 2px solid #e8ecef;
+  border-radius: 12px;
+  padding: 16px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #2c3e50;
+}
+
+.horario-slot:hover {
+  border-color: #ff6b35;
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+.horario-slot.selected {
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  border-color: #ff6b35;
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.no-horarios {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+  padding: 40px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+/* Cita Summary */
+.cita-summary {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 30px;
+  border: 1px solid #e8ecef;
+}
+
+.cita-summary h4 {
+  color: #2c3e50;
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e8ecef;
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.summary-item .label {
+  color: #6c757d;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.summary-item .value {
+  color: #2c3e50;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid #e8ecef;
+}
+
+.btn-prev,
+.btn-next,
+.btn-submit {
+  padding: 16px 32px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  max-width: 200px;
+}
+
+.btn-prev {
+  background: #f8f9fa;
+  color: #6c757d;
+  border: 2px solid #e8ecef;
+}
+
+.btn-prev:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.btn-next,
+.btn-submit {
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.btn-next:hover,
+.btn-submit:hover {
+  background: linear-gradient(135deg, #e55a2e, #e08419);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.btn-next:disabled,
+.btn-submit:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Success State */
+.success-icon {
+  font-size: 64px;
+  margin-bottom: 24px;
+}
+
+.solicitar-cita-container.success h2 {
+  color: #28a745;
+  margin-bottom: 16px;
+  font-size: 28px;
+}
+
+.solicitar-cita-container.success p {
+  color: #6c757d;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Error Message */
+.error-message {
+  background: #ffe6e6;
+  color: #d63384;
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  margin: 0 30px 20px 30px;
+  border: 1px solid #f5c2c7;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .solicitar-cita-overlay {
+    padding: 10px;
+  }
+
+  .solicitar-cita-container {
+    max-height: 95vh;
+  }
+
+  .solicitar-cita-header {
+    padding: 20px;
+  }
+
+  .solicitar-cita-header h2 {
+    font-size: 20px;
+  }
+
+  .progress-bar {
+    padding: 20px;
+  }
+
+  .step {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    margin: 0 20px;
+  }
+
+  .progress-labels {
+    font-size: 12px;
+  }
+
+  .solicitar-cita-form {
+    padding: 20px;
+  }
+
+  .form-step {
+    min-height: auto;
+  }
+
+  .form-step h3 {
+    font-size: 20px;
+  }
+
+  .horarios-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 8px;
+  }
+
+  .horario-slot {
+    padding: 12px 8px;
+    font-size: 12px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-prev,
+  .btn-next,
+  .btn-submit {
+    max-width: none;
+    padding: 14px 24px;
+  }
+
+  .cita-summary {
+    padding: 16px;
+  }
+
+  .summary-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .summary-item .value {
+    text-align: left;
+  }
+}

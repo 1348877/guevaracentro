@@ -1,0 +1,317 @@
+/* Page Wrapper - Similar to SolicitarCita */
+.page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 120px; /* Space for fixed navbar */
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.contacto-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem 2rem; /* Solo padding lateral y inferior */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+.contacto-hero {
+  text-align: center;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+
+.contacto-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.contacto-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contacto-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.contacto-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+  border-left: 4px solid #4A90E2;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(74, 144, 226, 0.15);
+}
+
+.info-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.3rem;
+  line-height: 1.5;
+}
+
+.info-card strong {
+  color: #222;
+  font-weight: 600;
+}
+
+.contacto-form-section {
+  background: linear-gradient(135deg, #4A90E2, #6366F1);
+  color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(74, 144, 226, 0.3);
+}
+
+.contacto-form-section h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4A90E2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-enviar {
+  background: rgba(255, 255, 255, 0.9);
+  color: #4A90E2;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 14px 32px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  backdrop-filter: blur(10px);
+  align-self: center;
+}
+
+.btn-enviar:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.mapa-section {
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+}
+
+.mapa-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.mapa-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #4A90E2, #ff9800);
+  border-radius: 2px;
+}
+
+.mapa-container {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 4px 16px rgba(255, 152, 0, 0.08);
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(74, 144, 226, 0.1);
+}
+
+.mapa-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(74, 144, 226, 0.15), 0 6px 20px rgba(255, 152, 0, 0.1);
+}
+
+.mapa-descripcion {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #1a1a2e;
+  line-height: 1.6;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8fafe 0%, #eef4ff 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(74, 144, 226, 0.1);
+}
+
+.mapa-descripcion strong {
+  color: #4A90E2;
+  font-weight: 700;
+}
+
+.mapa-descripcion small {
+  color: #ff9800;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.urgencias-section {
+  background: linear-gradient(135deg, #fff3cd, #ffffff);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid #ffc107;
+  border-left: 6px solid #dc3545;
+}
+
+.urgencias-section h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #dc3545;
+  margin-bottom: 1rem;
+}
+
+.urgencias-section p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.urgencias-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.urgencias-section li {
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #555;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.urgencias-section li:last-child {
+  border-bottom: none;
+}
+
+.urgencias-section strong {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .page-wrapper {
+    padding-top: 90px; /* Ajuste para móvil */
+    padding-bottom: 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .contacto-container {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .contacto-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .contacto-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .contacto-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .contacto-form-section {
+    padding: 1.5rem;
+  }
+  
+  .mapa-container iframe {
+    height: 250px;
+  }
+
+  .info-card {
+    padding: 1.2rem;
+  }
+
+  .urgencias-section {
+    padding: 1.5rem;
+  }
+}
