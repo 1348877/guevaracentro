@@ -46,7 +46,7 @@ cd centro-psicologico-integral-guevara
 
 ### 2. Configurar Backend
 ```bash
-cd backend
+cd back
 npm install
 
 # Configurar variables de entorno
@@ -62,7 +62,7 @@ npm run dev
 
 ### 3. Configurar Frontend
 ```bash
-cd front-end
+cd front
 npm install
 
 # Configurar variables de entorno
@@ -151,25 +151,25 @@ VITE_APP_NAME=Centro Psicológico Integral Guevara
 
 ```
 centro-psicologico-integral-guevara/
-├── backend/                 # Servidor Node.js
+├── back/                     # Servidor Node.js
 │   ├── src/
-│   │   ├── controllers/     # Controladores de rutas
-│   │   ├── models/          # Modelos de base de datos
-│   │   ├── routes/          # Definición de rutas
-│   │   ├── middleware/      # Middleware personalizado
-│   │   ├── services/        # Lógica de negocio
-│   │   └── utils/           # Utilidades y helpers
-│   └── config/              # Configuración de BD
-├── front-end/               # Aplicación React
+│   │   ├── controllers/      # Controladores de rutas
+│   │   ├── models/           # Modelos de base de datos
+│   │   ├── routes/           # Definición de rutas
+│   │   ├── middleware/       # Middleware personalizado
+│   │   ├── services/         # Lógica de negocio
+│   │   └── utils/            # Utilidades y helpers
+│   └── config/               # Configuración de BD
+├── front/                    # Aplicación React
 │   ├── src/
-│   │   ├── components/      # Componentes reutilizables
-│   │   ├── pages/           # Páginas principales
-│   │   ├── services/        # Servicios para API
-│   │   └── styles/          # Estilos globales
-│   └── public/              # Assets estáticos
-└── app-movil/               # App React Native (futuro)
-    ├── src/
-    └── assets/
+│   │   ├── components/       # Componentes reutilizables
+│   │   ├── pages/            # Páginas principales
+│   │   ├── services/         # Servicios para API
+│   │   └── styles/           # Estilos globales
+│   └── public/               # Assets estáticos
+└── legacy/                   # Archivos heredados
+    ├── app-movil/            # App React Native (futuro)
+    └── *.md                  # Documentación antigua
 ```
 
 ## 🧪 Testing
